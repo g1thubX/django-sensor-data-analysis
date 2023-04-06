@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>温湿度传感器数据</title>
+</head>
+<body>
+    <h1>最近的温湿度传感器数据</h1>
+    <ul>
+    {% for item in data %}
+        <li>{{ item.topic }}: {{ item.value }} ({{ item.timestamp }})</li>
+    {% empty %}
+        <li>没有找到数据</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
